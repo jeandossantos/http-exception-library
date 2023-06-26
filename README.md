@@ -1,9 +1,14 @@
 # http exception library
+## Features
+
+- Handle common HTTP error scenarios with dedicated exception classes.
+- Generate error responses with customizable error messages and status codes.
+- Improve code readability and maintainability by encapsulating error logic in reusable classes.
 
 ## Install
 
 ```bash
-npm install http-exception-library
+npm i http-exception-library
 ```
 
 ## Usage
@@ -48,8 +53,8 @@ routes.get('/users/:id', async (req, res) => {
 export { routes };
 ```
 
-## The Constant HttpStatus
-Note that the http-exception-library also imports a object HttpStatus:
+## The HttpStatus object
+Note that the `http-exception-library` also imports an object HttpStatus:
 ```js
 import { HttpException, HttpStatus } from 'http-exception-library';
 
@@ -57,10 +62,9 @@ console.log(HttpStatus.OK); // Output: 200
 console.log(HttpStatus.NOT_FOUND); // Output: 404
 ```
 
+## Which exception classes this package provides?
 
-## How many exception classes this package provides?
-
-http-exception-library provides a set of exception classes that inherit from the base HttpException. 
+`http-exception-library` provides a set of exception classes that inherit from the base HttpException. 
 These classes represent many of the most common HTTP exceptions:
 
 - BadRequestException
@@ -84,7 +88,7 @@ These classes represent many of the most common HTTP exceptions:
 - GatewayTimeoutException
 - PreconditionFailedException
 
-## Constant HttpStatus
+## HttpStatus Object
 The `HttpStatus` object maps the status names to their corresponding status codes.
 
 - HttpStatus.CONTINUE: 100
@@ -147,4 +151,5 @@ The `HttpStatus` object maps the status names to their corresponding status code
 - HttpStatus.NOT_EXTENDED: 510
 - HttpStatus.NETWORK_AUTHENTICATION_REQUIRED: 511
 
-
+## License
+This project is licensed under the MIT License.
