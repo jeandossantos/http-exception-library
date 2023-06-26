@@ -6,7 +6,7 @@ import PayloadTooLargeException from '../exceptions/payloadTooLargeException.js'
 import { HttpStatus } from '../constants.js';
 
 describe('PayloadTooLargeException class', () => {
-  const statusCode = HttpStatus.BAD_REQUEST;
+  const statusCode = HttpStatus.PAYLOAD_TOO_LARGE;
 
   const defaultError = {
     message: STATUS_CODES[statusCode],
