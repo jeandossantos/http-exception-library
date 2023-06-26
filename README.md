@@ -28,6 +28,26 @@ export function errorHandler(error, req, res, next) {
 }
 
 ```
+Now into your request handlers, you can use the exception classes without a try/catch block.
+```js
+import { Router } from 'express';
+import { BadRequestException } from 'http-exception-library';
+
+import { User } from '../models/user';
+
+const routes = Router();
+
+routes.get('/users/:id', async (req, res) => {
+  const user = await User.FindOne({ id: req.params.id });
+
+  if (!user) throw new BadRequestException(undefined, 'USER_NOT_FOUND');
+
+  //...
+});
+
+export { routes };
+```
+
 ## The Constant HttpStatus
 Note that the http-exception-library also imports a object HttpStatus:
 ```js
@@ -65,7 +85,7 @@ These classes represent many of the most common HTTP exceptions:
 - PreconditionFailedException
 
 ## Constant HttpStatus
-The `HttpStatus` object provides constants for commonly used HTTP status codes. It maps the status names to their corresponding status codes.
+The `HttpStatus` object maps the status names to their corresponding status codes.
 
 - HttpStatus.CONTINUE: 100
 - HttpStatus.SWITCHING_PROTOCOLS: 101
