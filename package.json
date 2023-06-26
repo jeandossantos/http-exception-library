@@ -1,0 +1,13 @@
+{
+  "name": "http-exception-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node src/tests/index.test.js"
+  },
+  "keywords": [],
+  "author": "jeandossantos",
+  "license": "ISC"
+}
