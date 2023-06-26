@@ -1,5 +1,9 @@
 import { HttpStatus } from '../constants.js';
 
+const STATUS_CODE_RANGE = {
+  start: 400,
+  end: 511,
+};
 /**
  * Represents an HTTP exception.
  * Extends the Error class.
