@@ -1,3 +1,10 @@
+import { STATUS_CODES } from 'node:http';
+
+import HttpException from './httpException.js';
+import { HttpStatus } from '../constants.js';
+
+const statusCode = HttpStatus.BAD_REQUEST;
+
 /**
  * Represents a BadRequestException, which is an HTTP exception indicating a bad request.
  * Extends the HttpException class.
