@@ -152,4 +152,4 @@ The `HttpStatus` object maps the status names to their corresponding status code
 - HttpStatus.NETWORK_AUTHENTICATION_REQUIRED: 511
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the MIT [MIT License](LICENSE).
