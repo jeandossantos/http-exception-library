@@ -6,7 +6,7 @@ import BadGatewayException from '../exceptions/badGatewayException.js';
 import { HttpStatus } from '../constants.js';
 
 describe('BadGatewayException class', () => {
-  const statusCode = HttpStatus.GATEWAY_TIMEOUT;
+  const statusCode = HttpStatus.BAD_GATEWAY;
 
   const defaultError = {
     message: STATUS_CODES[statusCode],
