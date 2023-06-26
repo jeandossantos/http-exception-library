@@ -23,8 +23,6 @@ export default class HttpException extends Error {
       );
     }
 
-    console.log(message);
-
     if (!message) {
       throw Error('HttpException property message is required.');
     }
