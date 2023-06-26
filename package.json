@@ -2,9 +2,10 @@
   "name": "http-exception-library",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
+    "start": "node --watch src/index.js",
     "test": "node --test src/tests"
   },
   "keywords": [],
