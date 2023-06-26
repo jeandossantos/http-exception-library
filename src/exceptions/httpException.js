@@ -1,3 +1,5 @@
+import { HttpStatus } from '../constants.js';
+
 /**
  * Represents an HTTP exception.
  * Extends the Error class.
