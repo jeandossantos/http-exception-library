@@ -1,7 +1,7 @@
 {
   "name": "http-exception-library",
   "version": "1.0.0",
-  "description": "",
+  "description": "A set of exceptions classes.",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -10,5 +10,6 @@
   },
   "keywords": [],
   "author": "jeandossantos",
+  "homepage": "https://github.com/jeandossantos/seu-pacote#readme",
   "license": "ISC"
 }
