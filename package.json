@@ -8,7 +8,7 @@
     "start": "node --watch src/index.js",
     "test": "node --test src/tests"
   },
-  "keywords": [],
+  "keywords": ["http", "exception", "exceptions", "http exceptions", "error handling"],
   "author": "jeandossantos",
   "homepage": "https://github.com/jeandossantos/http-exception-library#readme",
   "license": "MIT"
