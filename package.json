@@ -9,7 +9,7 @@
     "test": "node --test src/tests"
   },
   "keywords": ["http", "exception", "exceptions", "http exceptions", "error handling"],
-  "author": "jeandossantos",
+  "author": "jeandossantos <jeanddg@hotmail.com",
   "homepage": "https://github.com/jeandossantos/http-exception-library#readme",
   "license": "MIT"
 }
