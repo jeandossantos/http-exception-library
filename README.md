@@ -61,16 +61,18 @@ import { User } from '../models/user';
 
 const routes = Router();
 
-routes.get('/users/:id', async (req, res) => {
+routes.get('/users/:id', async (req, res, next) => {
   const user = await User.FindOne({ id: req.params.id });
-
-  if (!user) throw new BadRequestException(undefined, 'USER_NOT_FOUND');
-
-  //...
+    try {
+        if (!user) throw new BadRequestException(undefined, 'USER_NOT_FOUND');
+    } catch (err) {
+      next(err)
+  }
 });
 
 export { routes };
 ```
+or you can just use the `express-async-errors` package and you will not need to use try/catch block.
 
 ## The HttpStatus object
 
