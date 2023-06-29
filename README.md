@@ -1,4 +1,4 @@
-# http exceptions library
+# http exception library
 
 ## Features
 
@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm i http-exceptions-library
+npm i http-exception-library
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ You can use it along with Express defining a custom error handler to replace the
 
 ```js
 import { STATUS_CODES } from 'http';
-import { HttpException, HttpStatus } from 'http-exceptions-library';
+import { HttpException, HttpStatus } from 'http-exception-library';
 
 export function errorHandler(error, req, res, next) {
   if (error instanceof HttpException) {
@@ -55,7 +55,7 @@ Now into your request handlers, you can use the exception classes without a try/
 
 ```js
 import { Router } from 'express';
-import { BadRequestException } from 'http-exceptions-library';
+import { BadRequestException } from 'http-exception-library';
 
 import { User } from '../models/user';
 
@@ -63,23 +63,25 @@ const routes = Router();
 
 routes.get('/users/:id', async (req, res, next) => {
   const user = await User.FindOne({ id: req.params.id });
-    try {
-        if (!user) throw new BadRequestException(undefined, 'USER_NOT_FOUND');
-    } catch (err) {
-      next(err)
+  try {
+    if (!user) throw new BadRequestException(undefined, 'USER_NOT_FOUND');
+    // ...
+  } catch (err) {
+    next(err);
   }
 });
 
 export { routes };
 ```
+
 or you can just use the `express-async-errors` package and you will not need to use try/catch block.
 
 ## The HttpStatus object
 
-Note that the `http-exceptions-library` also imports an object HttpStatus:
+Note that the `http-exception-library` also imports a HttpStatus object:
 
 ```js
-import { HttpException, HttpStatus } from 'http-exceptions-library';
+import { HttpException, HttpStatus } from 'http-exception-library';
 
 console.log(HttpStatus.OK); // Output: 200
 console.log(HttpStatus.NOT_FOUND); // Output: 404
@@ -87,7 +89,7 @@ console.log(HttpStatus.NOT_FOUND); // Output: 404
 
 ## Which exception classes this package provides?
 
-`http-exceptions-library` provides a set of exception classes that inherit from the base HttpException.
+`http-exception-library` provides a set of exception classes that inherit from the base HttpException.
 These classes represent many of the most common HTTP exceptions:
 
 - **BadRequestException**
